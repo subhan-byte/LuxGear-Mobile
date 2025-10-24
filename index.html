@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LuxGear Mobile — Premium Mobile Accessories</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="LuxGear Mobile — premium mobile accessories: cases, chargers, screen protectors & earbuds. Fast shipping, 1-year warranty.">
+    <meta name="keywords"
+        content="mobile accessories, phone cases, chargers, screen protector, wireless earbuds, premium accessories">
+    <meta name="author" content="LuxGear Mobile">
+    <link rel="canonical" href="https://www.yourdomain.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LuxGear Mobile — Premium Mobile Accessories">
+    <meta property="og:description"
+        content="Shop premium phone cases, chargers, screen protectors and earbuds. Elegant designs, fast shipping.">
+    <meta property="og:image" content="https://www.yourdomain.com/og-image.jpg">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LuxGear Mobile — Premium Mobile Accessories">
+    <meta name="twitter:description" content="Shop premium phone cases, chargers, screen protectors and earbuds.">
+    <meta name="twitter:image" content="https://www.yourdomain.com/og-image.jpg">
+
+    <link rel="icon" href="favicon.png" />
+
+    <!-- Inline critical CSS + animations -->
+    <style>
+        :root {
+            --bg: #060607;
+            --card: #0e0e10;
+            --muted: #9aa3ad;
+            --gold: #d7b35a;
+            --gold-2: #b68f3a;
+            --glass: rgba(255, 255, 255, 0.03);
+            --radius: 12px;
+            --shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background:
+                radial-gradient(1000px 360px at 12% 8%, rgba(215, 179, 90, 0.03), transparent 8%),
+                linear-gradient(180deg, #020202 0%, #071017 100%);
+            color: #fff;
+            -webkit-font-smoothing: antialiased
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .site {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            position: sticky;
+            top: 14px;
+            z-index: 60;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            backdrop-filter: blur(6px);
+            padding: 10px;
+            border-radius: 14px;
+            box-shadow: var(--shadow)
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .logo-mark {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #071017;
+            font-weight: 800;
+            font-size: 18px;
+            box-shadow: 0 8px 28px rgba(182, 143, 58, 0.12)
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        nav a {
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--muted);
+            font-weight: 600;
+            transition: all .18s
+        }
+
+        nav a:hover {
+            color: var(--gold);
+            background: var(--glass)
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 28px;
+            align-items: center;
+            margin-top: 24px
+        }
+
+        .hero-left h1 {
+            font-size: 32px;
+            margin: 0 0 12px 0;
+            letter-spacing: 0.2px
+        }
+
+        .hero-left p {
+            color: var(--muted);
+            margin: 0 0 18px 0;
+            line-height: 1.5
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--gold), var(--gold-2));
+            color: #071017;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(183, 145, 62, 0.12)
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: var(--gold-2)
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            border-radius: var(--radius);
+            padding: 14px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: transform .22s, box-shadow .22s
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6)
+        }
+
+        .hero-right .preview {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .preview img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transform: scale(1);
+            transition: transform .6s cubic-bezier(.2, .9, .2, 1)
+        }
+
+        .product:hover .preview img {
+            transform: scale(1.04)
+        }
+
+        .preview .meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px
+        }
+
+        .products {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .product {
+            position: relative;
+            padding: 14px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.03));
+            transition: transform .18s, box-shadow .18s, opacity .25s;
+            cursor: pointer;
+            overflow: hidden
+        }
+
+        .product::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+            mix-blend-mode: screen;
+            opacity: 0;
+            transition: opacity .22s
+        }
+
+        .product:hover::after {
+            opacity: 1
+        }
+
+        .product img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            display: block;
+            transition: transform .45s
+        }
+
+        .product h3 {
+            margin: 10px 0 6px 0;
+            font-size: 16px
+        }
+
+        .price {
+            font-weight: 800;
+            color: var(--gold-2)
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .badges {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .bar {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 18px
+        }
+
+        .search {
+            flex: 1;
+            display: flex;
+            gap: 8px
+        }
+
+        .search input {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: transparent;
+            color: var(--gold-2)
+        }
+
+        .select {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: transparent;
+            color: var(--gold-2)
+        }
+
+        .side {
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        .info-block {
+            padding: 12px;
+            border-radius: 10px
+        }
+
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .testimonial {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+            padding: 12px;
+            border-radius: 10px
+        }
+
+        .cart-mini {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(180deg, #0b0b0b, #0d0d0d);
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6)
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 120;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .18s
+        }
+
+        .modal.open {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .modal .inner {
+            width: 760px;
+            max-width: 92%;
+            background: linear-gradient(180deg, #0b0b0b, #0a0a0a);
+            padding: 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.04)
+        }
+
+        .row {
+            display: flex;
+            gap: 12px
+        }
+
+        footer {
+            margin-top: 30px;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+            padding: 18px
+        }
+
+        /* subtle entry animation */
+        .fadeIn {
+            animation: fadeIn .6s ease both
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @media(max-width:980px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            nav {
+                display: none
+            }
+        }
+
+        @media(max-width:640px) {
+            .products {
+                grid-template-columns: 1fr
+            }
+
+            header {
+                padding: 8px
+            }
+
+            .logo-mark {
+                width: 38px;
+                height: 38px
+            }
+        }
+    </style>
+
+    <!-- Store JSON-LD -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Store",
+    "name":"LuxGear Mobile",
+    "url":"https://www.yourdomain.com/",
+    "logo":"https://www.yourdomain.com/logo.png",
+    "description":"Premium mobile accessories — cases, chargers, screen protectors and earbuds.",
+    "telephone":"+1-555-0100",
+    "sameAs":["https://www.facebook.com/your","https://instagram.com/your"]
+  }
+  </script>
+
+</head>
+
+<body>
+    <div class="site fadeIn" id="top">
+        <header role="banner" class="card">
+            <div class="logo">
+                <div class="logo-mark" aria-hidden="true">LG</div>
+                <div>
+                    <div style="font-weight:800">LuxGear Mobile</div>
+                    <div style="font-size:12px;color:var(--muted)">Premium Accessories</div>
+                </div>
+            </div>
+            <nav role="navigation" aria-label="Primary">
+                <a href="#products">Products</a>
+                <a href="#features">Why Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-left">
+                    <h1>Premium mobile accessories crafted for style & reliability</h1>
+                    <p>LuxGear delivers premium cases, fast chargers, high-clarity screen protectors and studio-quality
+                        earbuds — designed for modern phones.</p>
+                    <div class="cta">
+                        <button class="btn" id="shopNow">Shop Bestsellers</button>
+                        <button class="btn secondary" id="viewAll">Explore All</button>
+                    </div>
+
+                    <div class="bar">
+                        <div class="search card" style="display:flex;align-items:center;padding:8px;flex:1">
+                            <input id="searchInput" type="search"
+                                placeholder="Search products (case, charger, earbuds) ..."
+                                aria-label="Search products" />
+                        </div>
+                        <select id="filterCat" class="select card" aria-label="Filter category">
+                            <option value="all">All categories</option>
+                            <option value="cases">Phone Cases</option>
+                            <option value="chargers">Chargers</option>
+                            <option value="screen">Screen Protectors</option>
+                            <option value="audio">Earbuds</option>
+                        </select>
+                    </div>
+                </div>
+
+                <aside class="hero-right card">
+                    <div class="preview">
+                        
+                        <img src="armore%20case.png" alt="LuxGear premium case preview" />
+                        <div class="meta">
+                            <div>
+                                <div style="font-weight:800">Bestseller — Gilded Case</div>
+                                <div class="muted">Matte finish • Military grade protection</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div class="price" style="font-weight:800">$29.99</div>
+                                <div class="muted">Free shipping</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:10px;margin-top:12px">
+                        <div style="flex:1" class="card info-block">
+                            <div style="font-weight:800">Warranty</div>
+                            <div class="muted">1 year warranty on all products</div>
+                        </div>
+                        <div style="flex:1" class="card info-block">
+                            <div style="font-weight:800">Support</div>
+                            <div class="muted">Fast email & chat support</div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            
+            <section id="products" style="margin-top:26px">
+                <h2 style="margin:0 0 12px 0">Featured Products</h2>
+                <div class="products" id="productGrid" aria-live="polite"></div>
+            </section>
+
+            
+            <section id="features" style="margin-top:26px;display:flex;gap:18px;align-items:flex-start">
+                <div style="flex:2" class="card">
+                    <h3 style="margin-top:0">Why choose LuxGear</h3>
+                    <ul style="margin:10px 0;color:var(--muted);line-height:1.6">
+                        <li><strong>Premium materials:</strong> aircraft-grade materials with scratch-resistant
+                            finishes.</li>
+                        <li><strong>Tested protection:</strong> drop-tested to military standards.</li>
+                        <li><strong>Sustainable packing:</strong> recyclable packaging & minimal plastic.</li>
+                        <li><strong>Fast delivery:</strong> shipping in 24–72 hours depending on location.</li>
+                    </ul>
+                </div>
+
+                <aside class="side" style="flex:1">
+                    <div class="card info-block">
+                        <div style="font-weight:800">Free Shipping</div>
+                        <div class="muted">Orders over $50</div>
+                    </div>
+                    <div class="card testimonials" id="testimonials">
+                        <h4 style="margin:0 0 8px 0">What customers say</h4>
+                        <div class="testimonial">“Love the build — feels premium and durable.” <div class="muted"
+                                style="margin-top:6px">— Sara K.</div>
+                        </div>
+                        <div class="testimonial">“Fast shipping and great packaging.” <div class="muted"
+                                style="margin-top:6px">— Omar R.</div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+           
+            <section id="contact" style="margin-top:26px">
+                <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+                    <div class="card">
+                        <h3 style="margin-top:0">Contact Us</h3>
+                        <form id="contactForm" action="#" novalidate>
+                            <label class="muted">Full name <span style="color:var(--gold)">*</span><br /><input
+                                    id="name" name="name" required
+                                    style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--gold-2);margin-top:6px" /></label>
+                            <div style="height:12px"></div>
+                            <label class="muted">Email <span style="color:var(--gold)">*</span><br /><input id="email"
+                                    name="email" type="email" required
+                                    style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--gold-2);margin-top:6px" /></label>
+                            <div style="height:12px"></div>
+                            <label class="muted">Message<br /><textarea id="message" name="message" rows="4"
+                                    style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--gold-2);margin-top:6px"></textarea></label>
+                            <div style="height:12px"></div>
+                            <div style="display:flex;gap:8px;align-items:center">
+                                <button type="submit" class="btn">Send Message</button>
+                                <div id="contactStatus" class="muted" style="font-size:13px"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <aside class="card">
+                        <h4 style="margin-top:0">Store Info</h4>
+                        <div class="muted">LuxGear Mobile — Premium Accessories</div>
+                        <div style="height:8px"></div>
+                        <div class="muted">Email: hello@yourdomain.com</div>
+                        <div class="muted">Phone: +1-555-0100</div>
+                        <div style="height:12px"></div>
+                        <div style="font-weight:800">Opening hours</div>
+                        <div class="muted">Mon–Fri: 9am — 6pm</div>
+                    </aside>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>© 2025 LuxGear Mobile · Crafted with care ·©
+        </footer>
+
+        <div class="cart-mini card" aria-live="polite" id="cartMini" style="display:none">
+            <h4 style="margin:0 0 8px 0">Cart</h4>
+            <div class="cart-list" id="cartList"></div>
+            <div style="height:10px"></div>
+            <div style="display:flex;gap:8px;justify-content:flex-end">
+                <button id="checkoutBtn" class="btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="inner card" role="document">
+            <div style="display:flex;gap:18px;align-items:flex-start">
+                <div style="flex:1"><img id="modalImg" src="" alt=""
+                        style="width:100%;height:320px;object-fit:cover;border-radius:8px" /></div>
+                <div style="width:360px">
+                    <h3 id="modalTitle">Product</h3>
+                    <div id="modalDesc" class="muted" style="margin:8px 0"></div>
+                    <div style="font-weight:800" id="modalPrice">$0.00</div>
+                    <div style="height:12px"></div>
+                    <div style="display:flex;gap:8px">
+                        <button id="addToCartBtn" class="btn">Add to cart</button>
+                        <button id="closeModal" class="btn secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        (function () {
+            
+            const PRODUCTS = [
+                { id: 'case-gilded', title: 'Gilded Armor Case', price: 29.99, category: 'cases', img: 'armore%20case.png', desc: 'Luxury matte case with gold trim and drop protection.' },
+                { id: 'charger-45w', title: 'Turbo Charger', price: 39.00, category: 'chargers', img: 'charger.png', desc: 'GaN charger, fast charge, compact design.' },
+                { id: 'screen-elite', title: 'Elite Glass Protector', price: 14.99, category: 'screen', img: 'protector.png', desc: '9H tempered glass with oleophobic coating.' },
+                { id: 'buds-pro', title: 'Aire Pods', price: 89.00, category: 'audio', img: 'aire%20pods.png', desc: 'Studio earbuds with ANC & wireless charging.' },
+                { id: 'case-slim', title: 'Slim Shield Case', price: 19.99, category: 'cases', img: 'slime%20case.png', desc: 'Ultra-slim protective shell with soft touch finish.' },
+                { id: 'cable-2m', title: 'Braided Data Cable', price: 12.50, category: 'chargers', img: 'data%20cable.png', desc: 'Durable braided USB cable, USB-C compatible.' }
+            ];
+
+            const grid = document.getElementById('productGrid');
+            const searchInput = document.getElementById('searchInput');
+            const filterCat = document.getElementById('filterCat');
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalPrice = document.getElementById('modalPrice');
+            const addToCartBtn = document.getElementById('addToCartBtn');
+            const closeModal = document.getElementById('closeModal');
+            const shopNow = document.getElementById('shopNow');
+            const viewAll = document.getElementById('viewAll');
+            const cartMini = document.getElementById('cartMini');
+            const cartList = document.getElementById('cartList');
+
+            let CART = JSON.parse(localStorage.getItem('lg_cart') || '[]');
+
+            
+            function createProductCard(p) {
+                const el = document.createElement('div');
+                el.className = 'product card fadeIn';
+                el.innerHTML = `
+        <div style="overflow:hidden;border-radius:10px">
+          <img data-src="${p.img}" alt="${p.title}" loading="lazy" width="600" height="320" />
+        </div>
+        <h3>${p.title}</h3>
+        <div class="muted">${p.desc}</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+          <div class="price">$${p.price.toFixed(2)}</div>
+          <div class="badges"><div class="badge">${p.category}</div></div>
+        </div>
+      `;
+               
+                const img = el.querySelector('img');
+                img.addEventListener('load', () => img.style.transform = 'scale(1.01)');
+                
+                setTimeout(() => { img.src = img.dataset.src; }, 80);
+
+                el.addEventListener('click', () => openModal(p));
+                return el;
+            }
+
+            function renderProducts(list) {
+                grid.innerHTML = '';
+                if (list.length === 0) {
+                    grid.innerHTML = '<div class="card muted" style="padding:24px">No products found</div>';
+                    return;
+                }
+                
+                list.forEach((p, i) => {
+                    const card = createProductCard(p);
+                    card.style.animationDelay = (i * 60) + 'ms';
+                    grid.appendChild(card);
+                });
+            }
+
+            function openModal(p) {
+                modalImg.src = p.img; 
+                modalImg.alt = p.title;
+                modalTitle.textContent = p.title;
+                modalDesc.textContent = p.desc;
+                modalPrice.textContent = '$' + p.price.toFixed(2);
+                addToCartBtn.dataset.productId = p.id;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                
+                setTimeout(() => closeModal.focus(), 50);
+            }
+
+            function closeModalFn() {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            function addToCart(productId) {
+                const prod = PRODUCTS.find(x => x.id === productId);
+                if (!prod) return;
+                const found = CART.find(x => x.id === productId);
+                if (found) found.qty += 1; else CART.push({ id: prod.id, title: prod.title, price: prod.price, qty: 1 });
+                localStorage.setItem('lg_cart', JSON.stringify(CART));
+                renderCartMini();
+                
+                const checkout = document.getElementById('checkoutBtn');
+                checkout.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }], { duration: 260 });
+            }
+
+            function renderCartMini() {
+                if (CART.length === 0) { cartMini.style.display = 'none'; return; }
+                cartMini.style.display = 'block';
+                cartList.innerHTML = '';
+                CART.forEach(item => {
+                    const row = document.createElement('div');
+                    row.style.display = 'flex';
+                    row.style.justifyContent = 'space-between';
+                    row.style.padding = '6px 0';
+                    row.innerHTML = `<div>${item.title} <span class="muted" style="font-size:12px">x${item.qty}</span></div><div style="font-weight:700">$${(item.price * item.qty).toFixed(2)}</div>`;
+                    cartList.appendChild(row);
+                });
+            }
+
+            function filterAndRender() {
+                const q = (searchInput.value || '').trim().toLowerCase();
+                const cat = filterCat.value;
+                let out = PRODUCTS.filter(p => {
+                    const matchQ = p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+                    const matchCat = (cat === 'all') || (p.category === cat);
+                    return matchQ && matchCat;
+                });
+                renderProducts(out);
+            }
+
+            
+            const contactForm = document.getElementById('contactForm');
+            const contactStatus = document.getElementById('contactStatus');
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                if (!name || !email) { contactStatus.textContent = 'Please provide name & email.'; return; }
+                contactStatus.textContent = 'Preparing message...';
+                const subject = encodeURIComponent('Contact from website: ' + name);
+                const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+                window.location.href = `mailto:hello@yourdomain.com?subject=${subject}&body=${body}`;
+                setTimeout(() => { contactStatus.textContent = 'Mail client opened. If not, email hello@yourdomain.com' }, 1200);
+            });
+
+            
+            searchInput.addEventListener('input', filterAndRender);
+            filterCat.addEventListener('change', filterAndRender);
+            addToCartBtn.addEventListener('click', () => addToCart(addToCartBtn.dataset.productId));
+            closeModal.addEventListener('click', closeModalFn);
+            modal.addEventListener('click', function (e) { if (e.target === modal) closeModalFn(); });
+            shopNow.addEventListener('click', () => window.location.hash = '#products');
+            viewAll.addEventListener('click', () => { filterCat.value = 'all'; searchInput.value = ''; filterAndRender(); window.location.hash = '#products'; });
+
+            document.getElementById('checkoutBtn').addEventListener('click', function () {
+                if (CART.length === 0) { alert('Cart is empty'); return; }
+                const summary = CART.map(i => `${i.qty} x ${i.title} - $${(i.price * i.qty).toFixed(2)}`).join('\n');
+                const total = CART.reduce((s, i) => s + i.price * i.qty, 0);
+                const body = encodeURIComponent('Order summary:\n\n' + summary + '\n\nTotal: $' + total.toFixed(2) + '\n\nPlease reply to confirm.');
+                window.location.href = `mailto:orders@yourdomain.com?subject=New order&body=${body}`;
+            });
+
+           
+            renderProducts(PRODUCTS);
+            renderCartMini();
+
+            
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModalFn(); });
+
+        })();
+    </script>
+
+    
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[
+      { "@type":"ListItem","position":1,"item":{"@type":"Product","name":"Gilded Armor Case","image":"armore%20case.png","description":"Luxury matte case with gold trim."}},
+      { "@type":"ListItem","position":2,"item":{"@type":"Product","name":"Turbo Charger","image":"charger.png","description":"GaN fast charger."}}
+    ]
+  }
+  </script>
+
+</body>
+
+</html>
